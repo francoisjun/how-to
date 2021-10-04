@@ -6,7 +6,7 @@ Mas antes de começar a brincar no servidor remoto, crie uma chave SSH na sua m�
 
 ## Roteiro
 
-1. [Crie o seu usuário e ingresse no grupo dos sudoers](https://github.com/francoisjun/how-to/)
+1. [Crie o seu usuário e ingresse no grupo dos sudoers](https://github.com/francoisjun/how-to/linux/criar_usuario.md)
 2. Copie sua chave SSH para a VM
 3. Configure o servidor SSH desativando o login do usuário root
 4. Altere o nome da VM (hostname)
