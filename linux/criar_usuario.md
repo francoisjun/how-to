@@ -1,6 +1,8 @@
 # 🤦 Criando um usuário no linux
 
-Primeiramente faça o login no servidor linux com o usuário root via SSH.
+Primeiramente faça o login no servidor linux com o usuário root via SSH:
+
+    $ ssh root@<ip_servidor>
 
 > ℹ️ As linhas de comando iniciadas com `#` indicam que são executadas como usuário root, enquanto que as iniciadas com `$` indicam usuário comum. 
 
@@ -42,7 +44,7 @@ O comando e sua sintaxe segue abaixo:
 
 onde: 
 - `-a` indica que o novo grupo será adicionado à lista de grupos que o usuário já possui;
-- `-G sudo` é o grupo que será adicionado.
+- `-G sudo` informa o nome do grupo que será adicionado.
 
 > 🚨 Caso não seja passado o parâmetro `-a`, a lista de grupos do usuário será substituída, ficando apenas o grupo informado no parâmetro `-G`.
 
@@ -52,3 +54,5 @@ Mude o usuário ativo para o novo usuário e tente executar um comando administr
 
     # su nome_usuario
     $ sudo apt update
+
+Se o comando for executado com sucesso, você já pode se logar diretamente com seu usuário e sempre que precisar executar comandos administrativos inclua o comando `sudo` antes do comando principal (será solicitado a senha do seu usuário quando executar o comando `sudo` na primeira vez na sessão).
