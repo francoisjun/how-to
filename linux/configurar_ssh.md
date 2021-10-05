@@ -1,4 +1,4 @@
-# Configurar o servidor SSH
+# 🖥 Configurar o servidor SSH
 
 A essa altura você já deve ter seu usuário devidamente configurado. Está na hora de proteger melhor o acesso ao servidor!!!
 
@@ -34,6 +34,8 @@ Da mesma forma que no passo anterior, substitua o *yes* por *no*:
     PasswordAuthentication no
 
 > 🚨 Cuidado! Caso não tenha configurado **e testado** o login por chave SSH, desabilitar o login por senha vai impossibilitar o acesso ao servidor.
+
+> Uma consideração: se você costuma acessar o servidor de outras máquinas que não a sua, é interessante manter o login por senha. Caso não, terá sempre que estar com sua chave privada *"em mãos"* e isso pode aumentar o risco.
 
 ## Alterar a porta de acesso (opcional)
 
