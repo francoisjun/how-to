@@ -9,7 +9,7 @@ Com o comando `date` podemos checar rapidamente a data, hora e o fuso configurad
 
 > O `-03` indica que estamos no fuso de 3h a menos em relação ao *Universal Time Coordinated (UTC)*.
 
-Isso é util para saber as horas no terminal, mas podemos usar o comando `timedateclt` para mais detalhes:
+Isso é util para saber as horas no terminal, mas podemos usar o comando `timedatectl` para mais detalhes:
 
     $ timedatectl 
                    Local time: Tue 2021-10-05 13:35:05 -03
