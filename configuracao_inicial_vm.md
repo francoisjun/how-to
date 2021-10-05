@@ -12,6 +12,7 @@ Let's go 🏃
 2. 🔑 [Crie e copie sua chave SSH para a VM](https://github.com/francoisjun/how-to/blob/main/linux/criar_chave_ssh.md)
 3. 🖥 [Configure o servidor SSH](https://github.com/francoisjun/how-to/blob/main/linux/configurar_ssh.md)
 4. 🔖 [Altere o nome da VM (hostname)](https://github.com/francoisjun/how-to/blob/main/linux/configurar_hostname.md)
-5. Ajuste a hora do sistema (timezone)
+5. ⏱ [Ajuste a hora do sistema (timezone)](https://github.com/francoisjun/how-to/blob/main/linux/configurar_timezone.md)
 6. Habilite a memória SWAP
 7. Atualize os pacotes do sistema
+8. Configure o firewall
