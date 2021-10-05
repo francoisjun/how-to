@@ -1,5 +1,7 @@
 # 🤦 Criando um usuário no linux
 
+Ao criar uma nova VM você obtem acesso pelo usuário root. No entanto não é boa prática utilizar esse usuário a todo momento. Vamos iniciar as configurações adicionando um usuário para você chamar de seu!
+
 Primeiramente faça o login no servidor linux com o usuário root via SSH:
 
     $ ssh root@<ip_servidor>
