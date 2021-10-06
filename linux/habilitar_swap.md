@@ -15,10 +15,13 @@ onde:
 
 Observe a saída do comando:
 
-    000000
+    $ free -h
+            total        used        free      shared  buff/cache   available
+    Mem:    981Mi       191Mi       125Mi       0.0Ki       663Mi       633Mi
+    Swap:      0B          0B          0B
 
 
-Na primeira linha temos informações da memória RAM e na linha de baixo da memória SWAP. Observe que ela está zerada, indicando que está desabilitada.
+Na primeira `Mem` temos informações da memória RAM e na linha abaixo da memória SWAP. Observe que ela está zerada, indicando que está desabilitada.
 
 A memória SWAP pode ser criada como uma partição especial no disco ou em arquivo. Iremos utilizar o segundo método.
 
@@ -52,7 +55,10 @@ Caso precise desabilitar a memória SWAP, use o comando:
 Verifique agora com o comando `free` que a memória SWAP está habilitada:
 
     $ free -h
-    0000000
+            total        used        free      shared  buff/cache   available
+    Mem:    981Mi       186Mi       131Mi       0.0Ki       663Mi       638Mi
+    Swap:   1.9Gi          0B       1.9Gi
+
 
 ## Habilitando a memória SWAP permanentemente
 
