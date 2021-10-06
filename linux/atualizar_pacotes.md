@@ -10,7 +10,14 @@ Nas distribuições baseadas no Debian (como o Ubuntu) fazer atualização dos p
 
     $ sudo apt update
 
-Ao final ele já informa se tem ou não atualizações disponíveis. 
+Ao final ele já informa se tem ou não atualizações disponíveis:
+
+    $ sudo apt update
+    [...]                       
+    Reading package lists... Done
+    Building dependency tree       
+    Reading state information... Done
+    5 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
 2️⃣ Faça a instalação das atualizações:
 
