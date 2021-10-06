@@ -21,3 +21,4 @@ Let's go?
 5. ⏱ [Ajuste a hora do sistema (timezone)](https://github.com/francoisjun/how-to/blob/main/linux/configurar_timezone.md)
 6. 💾 [Habilite a memória SWAP](https://github.com/francoisjun/how-to/blob/main/linux/habilitar_swap.md)
 7. 📦 [Atualize os pacotes do sistema](https://github.com/francoisjun/how-to/blob/main/linux/atualizar_pacotes.md)
+8. 🔥 [Configure o Firewall](https://github.com/francoisjun/how-to/blob/main/linux/configurar_firewall.md)
