@@ -2,7 +2,7 @@
 
 Em miúdos, chave SSH consiste em um par de arquivos: a chave pública e privada. Elas são geradas por meio de algorítmos de criptografia assimétrica. A chave privada é como se fosse a senha e deve ser protegida com unhas e dentes. A chave pública pode ser distribuída livremente sem comprometer a segurança.
 
-Esse par de chaves geralmente fica armazenado no seu computador em um diretório oculto chamado `.ssh` na raiz do seu diretório `home`. Qualquer informação criptografada com a chave privada só pode ser descriptografada com a sua chave pública. 
+Esse par de chaves geralmente fica armazenado no seu computador em um diretório oculto chamado `.ssh` na raiz do seu diretório `home`. Qualquer informação criptografada com a chave pública só pode ser descriptografada com a sua chave privada. 
 
 Ao cadastrar sua chave pública em serviços como o github ou no servidor ssh da sua VM, você tem acesso a eles sem precisar informar senha, desde que feito do computador que possui a chave privada. Portanto se alguem tiver acesso à sua chave privada, ela pode acessar qualquer serviço na qual sua chave pública foi cadastrada. Se não ficou claro: **CUIDE BEM DA SUA CHAVE PRIVADA**.
 
@@ -51,8 +51,33 @@ onde:
 
 ## Copiando a chave pública para um servidor remoto
 
-Você pode copiar o arquivo `id_rsa.pub` da sua máquina e colar no servidor remoto, dentro do diretório `.ssh` do usuário que fará login. Mas existe um jeito mais fácil! Na sua máquina digite o seguinte comando:
+Esse processo fica simples com o comando abaixo:
 
     $ ssh-copy-id ~/.ssh/id_rsa nome_usuario@ip_do_servidor
 
 Esse comando fará a cópia da sua chave pública para o servidor remoto, no diretório do usuário informado. 
+
+Você também pode fazer esse processo manualmente mas é um pouco mais trabalhoso. 
+Primeiro copie o conteúdo da sua chave pública. Utilize o comando `cat` para imprimir o conteúdo do arquivo diretamente no terminal:
+
+    $ cat ~/.ssh/id_rsa.pub
+
+A saída do comando será algo pareciso com isto:
+
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIE1DcdKGE1BX1vXTAaN7P/7B+Ey8Hdj0283bWYiS8bdgwDwqekAmQy2Uix1fG1dZnm75HxLKGeo27sNhB2GfVPA5E/PdmNCJ5wWSik4SBkDlE8/F7sgL3WgQbAdkrjY/GByTarew7HzbiffiSUlgHgutdQi9o+lJHb21ZX5ZIwcdz7N9PohlgbJVlFLj0lmlLPZV1/KgCUZvwEoMAugmEns0lBzYe6LRKrOm4GlyR5I4alIWK1YhCeWg0Xv44nF9kAnKK+pjMnyh5kAZbEOP4kN/u9K7SVutKyd+5gM9PyYXlXbrRMsXSYc9fUWaxdOgSFcBiI6mQHIYiGKbNS+2oROLWCViVeApr+4b9EFEBL9H+itU1rl17L3mBOj+ZHrRa+1nQhIzfkWd0o2AvuXefYDJckhJ4kzZcap5bSU0MAvooQFyezujZtExhp+5KUBFJeRpjZ57roQUBTF5tHLJoFhw7vSqN7T5JWosLjDxtObrgRIVlDvMjB8vA9cEe3k0= nome_usuario@meu_pc
+
+Selecione todo esse conteúdo e copie. Agora acesse o servidor remoto com seu usuário. Vá para o diretório `.ssh`:
+
+    $ cd .ssh
+
+Caso o diretório não exista, você deve criá-lo com o comando abaixo:
+
+    $ mkdir .ssh
+
+Uma vez dentro do diretório, vamos editar um arquivo chamado `authorized_keys`:
+
+    $ nano authorized_keys
+
+> ℹ️ Quando tentamos editar um arquivo que não existe, o `nano` abre um arquivo novo. Na hora de salvar ele usará o nome do arquivo que informamos ao abrí-lo.
+
+Simplesmente cole o conteúdo de sua chave pública dentro do arquivo. Caso já exista outra chave, deixe uma linha em branco entre elas.
