@@ -49,6 +49,11 @@ onde:
 - `-f /home/nome_usuario/minha_chave` é o nome do arquivo de saída. Será gerado o arquivo `minha_chave` com a chave privada e `minha_chave.pub` com a chave pública;
 - `-C 'nome_usuario@meu_pc'` é um comentário no final da chave que pode ajudar a identificar o proprietário ou propósito da chave.
 
+**Update**
+O gitlab recomenda o uso da criptogragia ed25519, então utilize o comando abaixo como alternativa:
+    
+    $ ssh-keygen -t ed25519 -f /home/nome_usuario/minha_chave -C 'nome_usuario@meu_pc'
+
 ## Copiando a chave pública para um servidor remoto
 
 Esse processo fica simples com o comando abaixo:
